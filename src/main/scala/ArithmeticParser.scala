@@ -1,3 +1,6 @@
+//this source code is reference from here:
+//https://gist.github.com/daixque/1610753
+
 import scala.util.parsing.combinator._
 
 abstract class Value {
