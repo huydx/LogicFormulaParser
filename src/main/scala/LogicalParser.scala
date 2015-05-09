@@ -17,8 +17,8 @@ case class NotOperatorValue(value: BoolExpression) extends BoolExpression {
 }
 case class BinaryOperatorValue(op: String, v1: BoolExpression, v2: BoolExpression) extends BoolExpression {
   override def eval() = op match {
-    case "and" => v1.eval() & v2.eval()
-    case "or"  => v1.eval() | v2.eval()
+    case "and" => v1.eval() && v2.eval()
+    case "or"  => v1.eval() || v2.eval()
   }
 }
 
