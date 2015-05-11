@@ -1,3 +1,5 @@
+package reference
+
 /* reference from here
 http://www.scala-lang.org/old/node/5372
  */

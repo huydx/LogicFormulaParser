@@ -50,10 +50,8 @@ class Logical extends JavaTokenParsers {
   def bool: Parser[Boolean] = ("true" | "false") ^^ {case(n) => n.toBoolean}
 }
 
-object ParseExpr extends Logical {
-  def main(args: Array[String]) {
-    println("input : "+ args(0))
-    val result = parseAll(expr, args(0))
-    println(result.get.eval())
-  }
+class LogicalParser extends Logical {
+  def parse(str: String): Boolean =
+    parseAll(expr, str).get.eval()
 }
+
